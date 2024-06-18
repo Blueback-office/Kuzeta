@@ -27,9 +27,11 @@
     'description': 'This module removes the tracking number from the POS receipt header.',
     'author': 'Your Name',
     'depends': ['point_of_sale'],
-    'data': [
-        'views/receipt_header.xml',
-    ],
+    'assets': {
+        'point_of_sale._assets_pos': [
+            'pos_hide_tracking_number/static/src/xml/ReceiptHeader.xml',
+            ]
+    },
     'installable': True,
     'application': False,
     'auto_install': False,

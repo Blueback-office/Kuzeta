@@ -20,18 +20,18 @@
 #
 #############################################################################
 {
-    'name': 'Remove Order Tracking Number',
+    'name': 'Custom POS Receipt',
     'version': '1.0',
     'category': 'Point of Sale',
     'summary': 'Custom module to modify POS receipt header',
     'description': 'This module removes the tracking number from the POS receipt header.',
-    'author': 'Caribbean Data Challengers',
+    'author': 'Your Name',
     'depends': ['point_of_sale'],
     'data': [
-        'views/assets.xml',
         'views/receipt_header.xml',
     ],
     'installable': True,
     'application': False,
     'auto_install': False,
 }
+

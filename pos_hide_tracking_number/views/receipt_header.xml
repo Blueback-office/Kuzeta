@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templates id="template" xml:space="preserve">
-    <t t-name="point_of_sale.ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension" owl="1">
-        <xpath expr="//h1[@class='tracking-number text-center']" position="replace">
-            <!-- Replacing the tracking number with nothing -->
-        </xpath>
-    </t>
-</templates>
+<odoo>
+    <templates id="template" xml:space="preserve">
+        <t t-name="point_of_sale.ReceiptHeader" t-inherit="point_of_sale.ReceiptHeader" t-inherit-mode="extension" owl="1">
+            <xpath expr="//h1[@class='tracking-number text-center']" position="replace">
+                <!-- Removing the tracking number by replacing the h1 element with nothing -->
+            </xpath>
+        </t>
+    </templates>
+</odoo>

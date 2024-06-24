@@ -19,4 +19,5 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from . import models
+from . import pos_session
+from . import res_config_settings

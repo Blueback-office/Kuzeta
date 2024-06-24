@@ -19,4 +19,29 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from . import models
+from odoo import models
+
+class PosSession(models.Model):
+    _inherit = 'pos.session'
+
+    def _pos_ui_models_to_load(self):
+        # Extends the list of models to be loaded in the POS UI
+        result = super()._pos_ui_models_to_load()
+        result.append('res.config.settings')
+        return result
+
+    def _loader_params_res_config_settings(self):
+        # Specifies fields from res.config.settings to be loaded in the POS UI
+        return {
+            'search_params': {
+                'fields': [
+                    'hide_tracking_number',
+                    'receipt_details'
+                ],
+            },
+        }
+
+    def _get_pos_ui_res_config_settings(self, params):
+        # Fetches configuration settings based on specified parameters
+        return self.env['res.config.settings'].sudo().search_read(
+            **params['search_params'])

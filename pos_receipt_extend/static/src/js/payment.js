@@ -27,9 +27,11 @@ patch(PaymentScreen.prototype, {
         var address = order.customer_address;
         var name = order.customer_name;
         var customer_details = order.customer_details;
+        var hide_tracking = order.hide_tracking;
         var self = this;
 
         this.pos.customer_details = order.customer_details;
+        this.pos.hide_tracking = order.hide_tracking;
         this.pos.mobile = order.customer_mobile;
         this.pos.phone = order.customer_phone;
         this.pos.email = order.customer_email;

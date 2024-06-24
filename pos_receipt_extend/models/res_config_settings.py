@@ -54,3 +54,7 @@ class ResConfigSettings(models.TransientModel):
                                   help="By Enabling the customer vat details "
                                        "in pos receipt",
                                   config_parameter="pos_receipt_extend.customer_vat")
+    hide_tracking = fields.Boolean(string=" Hide Tracking number",
+                                  help="Hide tracking number "
+                                       "in pos receipt",
+                                  config_parameter="pos_receipt_extend.hide_tracking")

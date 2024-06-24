@@ -39,5 +39,9 @@
                 </t>
             </t>
         </xpath>
+        <xpath expr = "//h1[hasclass('tracking-number')]" position="replace">
+            <t t-if="this.env.services.pos.hide_tracking">
+                <h1  />
+        </xpath>
     </t>
 </templates>

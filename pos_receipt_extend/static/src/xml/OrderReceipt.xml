@@ -39,8 +39,8 @@
                 </t>
             </t>
         </xpath>
-        <xpath expr = "//h1[hasclass('tracking-number')]" position="replace">
-            <t t-if="this.env.services.pos.hide_tracking">
+        <xpath expr="//h1[@class='tracking-number text-center']" position="replace">
+            <h1 class="tracking-number text-center" style="font-size: 100px" t-if= "this.env.services.pos.hide_tracking" and "props.data.trackingNumber and props.data.bigTrackingNumber" t-esc="props.data.trackingNumber" />
                 <h1  />
         </xpath>
     </t>

@@ -1,0 +1,6 @@
+// Overriding styles in Odoo
+.o_menu_sections {
+    .o_nav_entry, .dropdown-toggle {
+        background: none !important;  // Remove the background
+    }
+}

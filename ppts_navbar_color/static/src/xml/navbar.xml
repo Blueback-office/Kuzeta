@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+ <t t-inherit="web.NavBar" t-inherit-mode="extension">
+     <xpath expr="//nav[hasclass('o_main_navbar')]" position="attributes">
+         <attribute name="t-attf-style" add="background-color: {{ company_id }} !important;" separator=" "/>
+    </xpath>
+ </t>
+</templates>
